@@ -10,4 +10,12 @@ router.get('/', function (req, res, next) {
   })
 })
 
+// router.get('/:id', function (req, res, next) {
+//   console.log(req.params.id)
+//
+//   res.status(200).json({
+//     zone: req.params.id
+//   })
+// })
+
 module.exports = router

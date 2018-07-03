@@ -1,7 +1,6 @@
 body {
   background-color: rgb(2, 10, 21);
-  background-image: url("/campaign-map.jpg");
-  background-size: cover;
+  /* background-image: url("/Milky_Way_Galaxy.jpg"); */
 }
 
 footer {
@@ -24,7 +23,11 @@ footer {
   align-items: center;
   overflow: hidden;
   display: inline-block;
-  width: 80%;
+  width: 1200px;
+  height: 1000px;
+  background-image: url("/Milky_Way_Galaxy_old.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #map {
@@ -45,6 +48,13 @@ footer {
   position: absolute;
   left: 0px;
   right: 0px;
+}
+
+#zone-info {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
 }
 
 /************************************/

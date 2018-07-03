@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ZoneInfo from './ZoneInfo'
 
 // big shout out to:  https://gist.github.com/zackthehuman/1867663
 // because I didn't do any hexagon math.
@@ -6,27 +7,35 @@ import React, { Component } from 'react'
 class Map extends Component {
   constructor (props) {
     super(props)
-    this.sideLength = 70
+    this.sideLength = 60
     this.hexagonAngle = 0.523598776
     this.hexHeight = Math.sin(this.hexagonAngle) * this.sideLength
     this.hexRadius = Math.cos(this.hexagonAngle) * this.sideLength
     this.hexRectangleHeight = this.sideLength + 2 * this.hexHeight
     this.hexRectangleWidth = 2 * this.hexRadius
-    this.boardWidth = 8
-    this.boardHeight = 8
+    this.boardWidth = 10
+    this.boardHeight = 10
 
     this.state = {
+      mouseX: null,
+      mouseY: null,
       hexX: null,
-      hexY: null
+      hexY: null,
+      zone: null
     }
+    this.zoneData = null
 
     this.handleClick = this.handleClick.bind(this)
     this.handleMouseMove = this.handleMouseMove.bind(this)
   }
 
-  componentDidMount () {
+  async componentDidMount () {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext('2d')
+
+    let zoneDataReq = await window.fetch('http://localhost:3006/zones')
+    let zoneData = await zoneDataReq.json()
+    this.zoneData = zoneData.zones
 
     this.drawMap(ctx)
   }
@@ -85,13 +94,16 @@ class Map extends Component {
 
     if (hexY < 0 || hexY + 1 > this.boardHeight) return
 
-    this.setState({
-      hexX: hexX,
-      hexY: hexY
-    })
-
     const screenX = hexX * this.hexRectangleWidth + ((hexY % 2) * this.hexRadius)
     const screenY = hexY * (this.hexHeight + this.sideLength)
+
+    this.setState({
+      mouseX: screenX,
+      mouseY: screenY,
+      hexX: hexX,
+      hexY: hexY,
+      zone: this.zoneData[(hexY * 10) + hexX]
+    })
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     this.drawMap(ctx, this.boardWidth, this.boardHeight)
@@ -99,10 +111,10 @@ class Map extends Component {
     this.drawHexagon(ctx, screenX, screenY, true)
   }
 
-  // <img src="/campaign-map.jpg" ref="img" alt="" />
   render () {
     return (
       <div id='map' onClick={this.handleClick} onMouseMove={this.handleMouseMove}>
+        <ZoneInfo ref='zoneInfo' zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
         <canvas ref='canvas' width='1200px' height='1000px' />
       </div>
     )
