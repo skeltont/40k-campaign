@@ -3,6 +3,8 @@ const path = require('path')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const MongoClient = require('mongodb').MongoClient
+const env = require('dotenv').config()
 
 const zones = require('./routes/zones')
 const app = express()
@@ -12,6 +14,29 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(function () {
+  // var opts = {}
+  // var property = opts.property || 'db'
+  // delete opts.property
+
+  var connection
+  return function expressMongoDb (req, res, next) {
+    if (!connection) {
+      connection = MongoClient.connect(env.parsed.mongo_url)
+    }
+
+    connection
+      .then(function (client) {
+        req['mongo'] = client
+        next()
+      })
+      .catch(function (err) {
+        connection = undefined
+        next(err)
+      })
+  }
+}())
 
 app.use('/zones', zones)
 
