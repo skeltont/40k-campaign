@@ -102,7 +102,7 @@ class Map extends Component {
       mouseY: screenY,
       hexX: hexX,
       hexY: hexY,
-      zone: this.zoneData[(hexY * 10) + hexX]
+      zone: (this.zoneData) ? this.zoneData[(hexY * 10) + hexX] : null
     })
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
