@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
-import './App.css';
-import Map from './Map';
+import React, { Component } from 'react'
+import './App.css'
+import Map from './Map'
+import CampaignHistory from './CampaignHistory'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div id="container">
-        <div id="map-panel">
+      <div id='container'>
+        <div id='map-panel'>
           <Map />
         </div>
-        <div id="history-panel">
-          Campaign History
-          <ul>
-            <li>
-              <p>Territory 1 taken by Player 1</p>
-              <p>Territory 3 taken by Player 2</p>
-              <p>Territory 2 taken by Player 3</p>
-              <p>Territory 1 taken by Player 1</p>
-              <p>Territory 3 taken by Player 2</p>
-              <p>Territory 2 taken by Player 3</p>
-            </li>
-          </ul>
+        <div id='history-panel'>
+          <CampaignHistory />
         </div>
       </div>
     )
   }
 }
 
-export default App;
+export default App
