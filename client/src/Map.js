@@ -114,8 +114,8 @@ class Map extends Component {
   render () {
     return (
       <div id='map' onClick={this.handleClick} onMouseMove={this.handleMouseMove}>
-        <ZoneInfo ref='zoneInfo' zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
         <canvas ref='canvas' width='1200px' height='1000px' />
+        <ZoneInfo ref='zoneInfo' zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
       </div>
     )
   }

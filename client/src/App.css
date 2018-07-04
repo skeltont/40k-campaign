@@ -8,6 +8,23 @@ footer {
   bottom: 0px;
 }
 
+@font-face {
+  font-family: 'ImperialFont';
+  src: url('/fonts/CaslonAntique.woff');
+}
+@font-face {
+  font-family: 'ImperialFontBold';
+  src: url('/fonts/CaslonAntique-Bold.woff');
+}
+@font-face {
+  font-family: 'ImperialFontItalic';
+  src: url('/fonts/CaslonAntique-Italic.woff');
+}
+@font-face {
+  font-family: 'ImperialFontBoldItalic';
+  src: url('/fonts/CaslonAntique-BoldItalic.woff');
+}
+
 /************************************/
 
 #container {
@@ -23,8 +40,8 @@ footer {
   align-items: center;
   overflow: hidden;
   display: inline-block;
-  width: 1200px;
-  height: 1000px;
+  min-width: 1200px;
+  min-height: 1000px;
   background-image: url("/Milky_Way_Galaxy_old.jpg");
   background-size: cover;
   background-position: center;
@@ -52,9 +69,53 @@ footer {
 
 #zone-info {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: white;
+  /* original */
+  /* width: 416px;
+  height: 243px; */
+
+  /* 0.8 */
+  width: 332px;
+  height: 194px;
+  pointer-events: none;
+}
+
+#zone-info .border {
+  background: url("/info_border.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 1;
+}
+
+#zone-info .backdrop {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 317px;
+  height: 178px;
+  z-index: 0;
+  background-color: rgba(40,44,54,.9);
+}
+
+#zone-info .content {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  color: white;
+  margin-left: 10px;
+  z-index: 2;
+}
+
+#zone-info .content h3 {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 30px;
+  font-family: "ImperialFontBoldItalic";
+}
+
+#zone-info .content p {
+  font-family: "ImperialFont";
 }
 
 /************************************/
