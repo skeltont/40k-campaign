@@ -1,0 +1,22 @@
+{
+  "factions": [
+    {
+      "id": 0,
+      "name": "Faction Name",
+      "color": "#ffffff"
+    }
+  ],
+  "zones": [
+    {
+      "id": 0,
+      "name": "Maccabeus Quintus",
+      "owner": 0,
+      "battleBenefit": "+1 cover for defender",
+      "battleDetriment": "-1 attacks for attacker",
+      "factionBoon": {
+        "type": "Command Points",
+        "amount": 1
+      }
+    }
+  ]
+}

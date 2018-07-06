@@ -17,15 +17,40 @@ class ZoneInfo extends Component {
 
   formatContent () {
     const zone = this.props.zone
+    const faction = this.props.faction
 
     if (!zone) return null
 
     return (
-      <div class="content">
+      <div className="content">
         <h3> {zone.name} </h3>
-        <p>
-          
-        </p>
+        <div className="faction">
+          {faction.name}
+        </div>
+        <div className="zone-info">
+          <div className="label">
+            Battle Benefit:
+          </div>
+          <div className="value">
+            {zone.battleBenefit}
+          </div>
+        </div>
+        <div className="zone-info">
+          <div className="label">
+            Battle Detriment:
+          </div>
+          <div className="value">
+            {zone.battleDetriment}
+          </div>
+        </div>
+        <div className="zone-info">
+          <div className="label">
+            Faction Boon:
+          </div>
+          <div className="value">
+            +{zone.factionBoon.amount} {zone.factionBoon.type}
+          </div>
+        </div>
       </div>
     )
   }
@@ -36,8 +61,8 @@ class ZoneInfo extends Component {
 
     return (
       <div id='zone-info' style={styles}>
-        <div class="backdrop" />
-        <div class="border" />
+        <div className="backdrop" />
+        <div className="border" />
         {content}
       </div>
     )
