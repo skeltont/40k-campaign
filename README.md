@@ -16,7 +16,11 @@ mongo_url="mongodb://user:pass@host:port"
 
 ## Seed database
 ```
-$ mongorestore ./campaign40k --db campaign40k -u USER -p PASS --drop
+$ mongorestore ./campaign40k --db campaign40k -u USER -p PASS --drop --authenticationDatabase admin
+```
+or
+```
+mongoimport --db campaign40k --collection gameStates --file gameStateSeed.json -u USER -p PASS --authenticationDatabase admin
 ```
 
 ## Run Client
