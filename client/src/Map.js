@@ -23,7 +23,7 @@ class Map extends Component {
       hexY: null,
       zone: null
     }
-    this.zoneData = null
+    this.gameState = null
 
     this.handleClick = this.handleClick.bind(this)
     this.handleMouseMove = this.handleMouseMove.bind(this)
@@ -33,44 +33,64 @@ class Map extends Component {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext('2d')
 
-    let zoneDataReq = await window.fetch('http://localhost:3006/zones')
-    let zoneData = await zoneDataReq.json()
-    this.zoneData = zoneData.zones
+    let gameStateReq = await window.fetch('http://localhost:3006/zones')
+    let gameState = await gameStateReq.json()
+    this.gameState = gameState
 
     this.drawMap(ctx)
   }
 
   drawMap (ctx) {
+    let color = null
+    let faction = null
+    let zone = null
+
     for (let i = 0; i < this.boardWidth; ++i) {
       for (let j = 0; j < this.boardHeight; ++j) {
+        zone = (this.gameState) ? this.gameState.zones[(j * 10) + i] : null
+
+        if (zone) {
+          faction = this.gameState.factions[zone.owner]
+          color = faction.color
+        }
+
         this.drawHexagon(
           ctx,
           i * this.hexRectangleWidth + ((j % 2) * this.hexRadius),
-          j * (this.sideLength + this.hexHeight)
+          j * (this.sideLength + this.hexHeight),
+          color
         )
       }
     }
   }
 
-  drawHexagon (ctx, x, y, fill = false) {
+  drawHexagon (ctx, x, y, color = null, fill = false) {
     x += 50
     y += 50
 
     ctx.beginPath()
-    ctx.moveTo(x + this.hexRadius, y)
-    ctx.lineTo(x + this.hexRectangleWidth, y + this.hexHeight)
-    ctx.lineTo(x + this.hexRectangleWidth, y + this.hexHeight + this.sideLength)
-    ctx.lineTo(x + this.hexRadius, y + this.hexRectangleHeight)
-    ctx.lineTo(x, y + this.sideLength + this.hexHeight)
-    ctx.lineTo(x, y + this.hexHeight)
+    ctx.moveTo(x + this.hexRadius, y + 3)
+    ctx.lineTo(x + this.hexRectangleWidth - 3, y + this.hexHeight)
+    ctx.lineTo(x + this.hexRectangleWidth - 3, y + this.hexHeight + this.sideLength)
+    ctx.lineTo(x + this.hexRadius, y + this.hexRectangleHeight - 3)
+    ctx.lineTo(x + 3, y + this.sideLength + this.hexHeight)
+    ctx.lineTo(x + 3, y + this.hexHeight)
     ctx.closePath()
 
-    ctx.strokeStyle = '#fff'
-    ctx.fillStyle = '#fff'
+    ctx.lineWidth=3;
+    if (color) {
+      ctx.strokeStyle = color
+      ctx.fillStyle = color
+    } else {
+      ctx.strokeStyle = '#fff'
+      ctx.fillStyle = '#fff'
+    }
 
     if (fill) {
+      ctx.globalAlpha = 0.5
       ctx.fill()
     } else {
+      ctx.globalAlpha = 1
       ctx.stroke()
     }
   }
@@ -94,6 +114,10 @@ class Map extends Component {
 
     if (hexY < 0 || hexY + 1 > this.boardHeight) return
 
+    const zone = (this.gameState) ? this.gameState.zones[(hexY * 10) + hexX] : null
+    const faction = (this.gameState) ? this.gameState.factions[zone.owner] : null
+    const color = (faction) ? faction.color : null
+
     const screenX = hexX * this.hexRectangleWidth + ((hexY % 2) * this.hexRadius)
     const screenY = hexY * (this.hexHeight + this.sideLength)
 
@@ -102,20 +126,21 @@ class Map extends Component {
       mouseY: screenY,
       hexX: hexX,
       hexY: hexY,
-      zone: (this.zoneData) ? this.zoneData[(hexY * 10) + hexX] : null
+      zone: zone,
+      faction: faction
     })
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     this.drawMap(ctx, this.boardWidth, this.boardHeight)
 
-    this.drawHexagon(ctx, screenX, screenY, true)
+    this.drawHexagon(ctx, screenX, screenY, color, true)
   }
 
   render () {
     return (
       <div id='map' onClick={this.handleClick} onMouseMove={this.handleMouseMove}>
         <canvas ref='canvas' width='1200px' height='1000px' />
-        <ZoneInfo ref='zoneInfo' zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
+        <ZoneInfo ref='zoneInfo' faction={this.state.faction} zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
       </div>
     )
   }

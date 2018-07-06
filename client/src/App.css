@@ -48,18 +48,7 @@ footer {
 }
 
 #map {
-  /* flex-shrink: 0;
-  width: 1200px;
-  height: 1000px; */
 }
-
-/* #map img {
-  width:100%;
-  height:100%;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-} */
 
 #map canvas {
   position: absolute;
@@ -109,13 +98,33 @@ footer {
 
 #zone-info .content h3 {
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-bottom: 5px;
   font-size: 30px;
   font-family: "ImperialFontBoldItalic";
 }
 
-#zone-info .content p {
+#zone-info .faction {
+  font-family: "ImperialFontBold";
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+#zone-info .content .zone-info {
+  display: inline-block;
+  font-size: 18px;
+}
+
+#zone-info .content .zone-info .label {
+  font-family: "ImperialFontBold";
+  margin-left: 15px;
+  float: left;
+}
+
+#zone-info .content .zone-info .value {
   font-family: "ImperialFont";
+  margin-left: 10px;
+  float: right;
 }
 
 /************************************/
