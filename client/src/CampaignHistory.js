@@ -1,23 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class CampaignHistory extends Component {
-  render () {
-    return (
-      <div>
-        Campaign History
-        <ul>
-          <li>
-            <p>Territory 1 taken by Player 1</p>
-            <p>Territory 3 taken by Player 2</p>
-            <p>Territory 2 taken by Player 3</p>
-            <p>Territory 1 taken by Player 1</p>
-            <p>Territory 3 taken by Player 2</p>
-            <p>Territory 2 taken by Player 3</p>
-          </li>
-        </ul>
+const CampaignHistoryRow = ({ data, factions }) => {
+  let attacker = factions[data.factions.attacker]
+  let defender = factions[data.factions.defender]
+  let background = (faction) => ({backgroundImage: `url(${faction.banner})`})
+
+  return (
+    <div className='campaign-history-row' style={{ border: '1px solid white' }}>
+      <div className='history-header'>{data.sector}</div>
+      <div className={'banner1 ' + ((data.info.winner === data.factions.defender) ? '' : 'grey')} style={background(defender)} />
+      <div className={'banner2 ' + ((data.info.winner === data.factions.attacker) ? '' : 'grey')} style={background(attacker)} />
+      <div className='history-info'>
+        <div>
+          {defender.name} attacked by {attacker.name}
+        </div>
+        <div className='date'>
+          {data.info.date}
+        </div>
+        <div style={{ paddingTop: '10px' }}>
+          {factions[data.info.winner].name} won:
+          <ul>
+            <li>{data.info.spoils}</li>
+          </ul>
+        </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default CampaignHistory
+export default CampaignHistoryRow

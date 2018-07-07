@@ -17,3 +17,7 @@ server/README.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Probably ununtrack these later
+client/public/blood-angels.jpeg
+client/public/orks.jpg

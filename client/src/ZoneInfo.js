@@ -21,10 +21,10 @@ class ZoneInfo extends Component {
     if (!zone) return null
 
     return (
-      <div class="content">
+      <div className="content">
         <h3> {zone.name} </h3>
         <p>
-          
+
         </p>
       </div>
     )
@@ -36,8 +36,8 @@ class ZoneInfo extends Component {
 
     return (
       <div id='zone-info' style={styles}>
-        <div class="backdrop" />
-        <div class="border" />
+        <div className="backdrop" />
+        <div className="border" />
         {content}
       </div>
     )
