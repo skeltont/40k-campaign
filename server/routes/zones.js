@@ -7,7 +7,7 @@ router.get('/:room', function (req, res, next) {
   try {
     room = parseInt(req.params.room)
   } catch (error) {
-    res.status(404).json({ "error": "invalid room id" })
+    res.status(404).json({ 'error': 'invalid room id' })
   }
 
   req.mongo.db('campaign40k').collection('zones').find({ room: room }).toArray(function (err, results) {

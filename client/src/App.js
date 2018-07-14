@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
 import './App.css'
-import Map from './Map'
-import CampaignHistory from './CampaignHistory'
+import Room from './Room'
+import Login from './Login'
+import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
   render () {
     return (
-      <div id='container'>
-        <div id='map-panel'>
-          <Map />
-        </div>
-        <div id='history-panel'>
-          <CampaignHistory />
-        </div>
-      </div>
+      <Switch>
+        <Route exact path='/' component={Login} />
+        <Route path='/room' component={Room} />
+      </Switch>
     )
   }
 }

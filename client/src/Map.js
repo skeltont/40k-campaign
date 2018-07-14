@@ -25,7 +25,6 @@ class Map extends Component {
     }
     this.gameState = null
 
-    // this.checkMapBounds = this.checkMapBounds.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleMouseMove = this.handleMouseMove.bind(this)
   }
@@ -35,15 +34,15 @@ class Map extends Component {
     const ctx = canvas.getContext('2d')
 
     let gameStateReq = await window.fetch('http://localhost:3006/gameStates/0')
-    let gameState = await gameStateReq.json()
-    this.gameState = gameState
-
     let zoneReq = await window.fetch('http://localhost:3006/zones/0')
-    let zones = await zoneReq.json()
-    this.zones = zones
-
     let factionReq = await window.fetch('http://localhost:3006/factions/0')
+
+    let gameState = await gameStateReq.json()
+    let zones = await zoneReq.json()
     let factions = await factionReq.json()
+
+    this.gameState = gameState
+    this.zones = zones
     this.factions = factions
 
     this.drawMap(ctx)
@@ -61,7 +60,6 @@ class Map extends Component {
 
     for (let i = 0; i < this.boardWidth; ++i) {
       for (let j = 0; j < this.boardHeight; ++j) {
-
         owner = (this.gameState) ? this.gameState.zones[(j * 10) + i].owner : null
 
         if (owner != null) {
@@ -92,16 +90,12 @@ class Map extends Component {
     ctx.closePath()
 
     ctx.lineWidth = 3
-    ctx.strokeStyle = (color != null) ? color : '#fff'
-    ctx.fillStyle = (color != null) ? color : '#fff'
+    ctx.strokeStyle = '#fff'
+    ctx.fillStyle = (color != null && !fill) ? color : '#fff'
+    ctx.globalAlpha = 0.5
 
-    if (fill) {
-      ctx.globalAlpha = 0.5
-      ctx.fill()
-    } else {
-      ctx.globalAlpha = 1
-      ctx.stroke()
-    }
+    ctx.fill()
+    ctx.stroke()
   }
 
   handleClick (e) {

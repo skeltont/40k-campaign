@@ -5,7 +5,7 @@ class ZoneInfo extends Component {
     let x = this.props.x
     let y = this.props.y
 
-    if (x == null || y == null) return { display: "none" }
+    if (x == null || y == null) return { display: 'none' }
 
     y += (y - 144 < 0) ? 170 : -144
 
@@ -19,37 +19,35 @@ class ZoneInfo extends Component {
     const zone = this.props.zone
     const faction = this.props.faction
 
-    console.log(zone, faction)
-
     if (!zone) return null
 
     return (
-      <div className="content">
+      <div className='content'>
         <h3> {zone.name} </h3>
-        <div className="faction">
+        <div className='faction'>
           {faction.name}
         </div>
-        <div className="zone-info">
-          <div className="label">
+        <div className='zone-info'>
+          <div className='label'>
             Battle Benefit:
           </div>
-          <div className="value">
+          <div className='value'>
             {zone.battleBenefit}
           </div>
         </div>
-        <div className="zone-info">
-          <div className="label">
+        <div className='zone-info'>
+          <div className='label'>
             Battle Detriment:
           </div>
-          <div className="value">
+          <div className='value'>
             {zone.battleDetriment}
           </div>
         </div>
-        <div className="zone-info">
-          <div className="label">
+        <div className='zone-info'>
+          <div className='label'>
             Faction Boon:
           </div>
-          <div className="value">
+          <div className='value'>
             +{zone.factionBoon.amount} {zone.factionBoon.type}
           </div>
         </div>
@@ -63,8 +61,8 @@ class ZoneInfo extends Component {
 
     return (
       <div id='zone-info' style={styles}>
-        <div className="backdrop" />
-        <div className="border" />
+        <div className='backdrop' />
+        <div className='border' />
         {content}
       </div>
     )
