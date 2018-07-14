@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
+import '../style/App.css'
 import Room from './Room'
 import Login from './Login'
 import { Switch, Route } from 'react-router-dom'

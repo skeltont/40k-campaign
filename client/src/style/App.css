@@ -1,5 +1,7 @@
 body {
   background-color: rgb(2, 10, 21);
+  margin: 0;
+  height: 100%;
 }
 
 footer {
@@ -25,6 +27,51 @@ footer {
 }
 
 /************************************/
+#login {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  background-image: url("/Milky_Way_Galaxy_old.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#login form {
+  display: flex;  
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  font-size: 30px;
+  font-family: "ImperialFontBoldItalic";
+}
+
+#login form .content {
+  width: 500px;
+  height: 400px;
+  margin: 5px;
+  text-align: center; 
+  color: white;
+  background-color: rgba(40,44,54,.9);
+}
+
+#login form .content div {
+  text-align: center;
+  display: block;
+}
+
+#login form .content div label {
+  width: 80%;
+}
+
+#login form .content div input {
+  width: 80%;
+}
+
+/************************************/
 
 #container {
   display: flex;
@@ -44,9 +91,6 @@ footer {
   background-image: url("/Milky_Way_Galaxy_old.jpg");
   background-size: cover;
   background-position: center;
-}
-
-#map {
 }
 
 #map canvas {
