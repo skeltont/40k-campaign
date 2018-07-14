@@ -1,0 +1,43 @@
+{
+    "rooms": {
+        "id": "int",
+        "name": "string",
+        "keys": [
+            {
+                "val": "string",
+                "note": "string",
+                "admin": "boolean"
+            }
+        ]
+    },
+    "factions": {
+        "room": "int",
+        "int": {
+            "active": "boolean",
+            "name": "string",
+            "color": "string-hex",
+            "bannerImg": "string"
+        }
+    },
+    "gameStates": {
+        "room": "int",
+        "int": {
+            "owner": "int"
+        },
+        "delta": {
+
+        }
+    },
+    "zones": {
+        "room": "int",
+        "int": {
+            "name": "string",
+            "battleBenefit": "string",
+            "battleDetriment": "string",
+            "factionBoon": {
+                "type": "string",
+                "amount": "int"
+            }
+        }    
+    }
+}

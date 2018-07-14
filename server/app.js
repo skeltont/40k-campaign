@@ -7,6 +7,8 @@ const MongoClient = require('mongodb').MongoClient
 const env = require('dotenv').config()
 
 const zones = require('./routes/zones')
+const factions = require('./routes/factions')
+const gameStates = require('./routes/gameStates')
 const app = express()
 
 app.use(logger('dev'))
@@ -41,6 +43,8 @@ app.use(function () {
 }())
 
 app.use('/zones', zones)
+app.use('/factions', factions)
+app.use('/gameStates', gameStates)
 
 app.use(function (req, res, next) {
   let err = new Error('Not Found')

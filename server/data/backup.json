@@ -1,0 +1,1168 @@
+{
+    "_id": "5b3f0ad9eb5380cdc3309870",
+    "timestamp": 1530857469,
+    "roomCode": "abcdefgh",
+    "roomKeys": {
+        "admin": "12345",
+        "other": [
+            {
+                "key": "aaaa",
+                "note": "Ty"
+            },
+            {
+                "key": "bbbb",
+                "note": "Cooper"
+            },
+            {
+                "key": "cccc",
+                "note": "John"
+            },
+            {
+                "key": "dddd",
+                "note": "Tristan"
+            },
+            {
+                "key": "eeee",
+                "note": "Rhett"
+            },
+            {
+                "key": "ffff",
+                "note": "Shane"
+            }
+        ]
+    },
+    "factions": [
+        {
+            "id": 0,
+            "name": "Farsight Enclaves",
+            "color": "#c70202"
+        },
+        {
+            "id": 1,
+            "name": "Salamanders",
+            "color": "#3db307"
+        },
+        {
+            "id": 2,
+            "name": "Blood Angels",
+            "color": "#940202"
+        },
+        {
+            "id": 3,
+            "name": "Eldar",
+            "color": "#02bcff"
+        },
+        {
+            "id": 4,
+            "name": "Imperial Fists",
+            "color": "#ebe300"
+        },
+        {
+            "id": 5,
+            "name": "Adeptus Mechanicus",
+            "color": "#ed6904"
+        }
+    ],
+    "zones": [
+        {
+            "id": 0,
+            "name": "Maccabeus Quintus",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 1,
+            "name": "The Lathes",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 2,
+            "name": "Medusa",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 3,
+            "name": "Cypra Mundi",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 4,
+            "name": "Mordian",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 5,
+            "name": "Dimmamar",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 6,
+            "name": "Naogeddon",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 7,
+            "name": "The Black Library",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 8,
+            "name": "Gorkamorka / Angelis",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 9,
+            "name": "Bork",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 10,
+            "name": "Custom Planet",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 11,
+            "name": "Agripinaa",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 12,
+            "name": "Fenris",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 13,
+            "name": "Molov",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 14,
+            "name": "Valhalla",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 15,
+            "name": "Baal",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 16,
+            "name": "Custom Planet",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 17,
+            "name": "Nexus III",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 18,
+            "name": "Commorragh",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 19,
+            "name": "Custom Planet",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 20,
+            "name": "Scintilla",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 21,
+            "name": "Agripinaa",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 22,
+            "name": "Cadia",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 23,
+            "name": "Armageddon",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 24,
+            "name": "The Rock",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 25,
+            "name": "Ornsworld",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 26,
+            "name": "Sable",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 27,
+            "name": "Jagga",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 28,
+            "name": "Vacuna",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 29,
+            "name": "Desperation",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 30,
+            "name": "Vordrast",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 31,
+            "name": "Hydraphur",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 32,
+            "name": "Terra",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 33,
+            "name": "Lastrati",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 34,
+            "name": "Prospero",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 35,
+            "name": "Jhanna",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 36,
+            "name": "Hexis Alpha",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 37,
+            "name": "Kar Duniash",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 38,
+            "name": "Custom Planet",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 39,
+            "name": "Custom Planet",
+            "owner": 1,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 40,
+            "name": "Custom Planet",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 41,
+            "name": "Mackan",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 42,
+            "name": "Mars",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 43,
+            "name": "Ryza",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 44,
+            "name": "Catachan",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 45,
+            "name": "Badab",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 46,
+            "name": "Custom Planet",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 47,
+            "name": "Custom Planet",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 48,
+            "name": "Attila",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 49,
+            "name": "Mandragora",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 50,
+            "name": "Macharia",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 51,
+            "name": "Posul",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 52,
+            "name": "Gathalamor",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 53,
+            "name": "Tallarn",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 54,
+            "name": "Balur",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 55,
+            "name": "Golgotha",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 56,
+            "name": "Corinthe",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 57,
+            "name": "Custom Planet",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 58,
+            "name": "Gidrim",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 59,
+            "name": "Okassis",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 60,
+            "name": "Adrantis V",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 61,
+            "name": "Ultima Macharia",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 62,
+            "name": "Krieg",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 63,
+            "name": "Necromunda",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 64,
+            "name": "Luther McIntyre",
+            "owner": 2,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 65,
+            "name": "Chogoris",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 66,
+            "name": "Charadon",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 67,
+            "name": "Shindelgheist",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 68,
+            "name": "Alsanta",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 69,
+            "name": "Espandor",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 70,
+            "name": "Thoth",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 71,
+            "name": "Chiros",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 72,
+            "name": "Opheila VII",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 73,
+            "name": "V'run",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 74,
+            "name": "Jurn",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 75,
+            "name": "Nocturne",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 76,
+            "name": "Balor",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 77,
+            "name": "Ichar IV",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 78,
+            "name": "T'au",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 79,
+            "name": "Iax",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 80,
+            "name": "Custom Planet",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 81,
+            "name": "Custom Planet",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 82,
+            "name": "Pintax",
+            "owner": 3,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 83,
+            "name": "Solstice",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 84,
+            "name": "Rynn's World",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 85,
+            "name": "Bane's Landing",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 86,
+            "name": "San Leor",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 87,
+            "name": "Macragge",
+            "owner": 0,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 88,
+            "name": "Vior'los",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 89,
+            "name": "Thandros",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 90,
+            "name": "Custom Planet",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 91,
+            "name": "Custom Planet",
+            "owner": 4,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 92,
+            "name": "Custom Planet",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 93,
+            "name": "Gryphonne IV",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 94,
+            "name": "Bakka",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 95,
+            "name": "Gheden",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 96,
+            "name": "Antagonis",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 97,
+            "name": "Black Reach",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 98,
+            "name": "Talassa Prime",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        },
+        {
+            "id": 99,
+            "name": "Custom Planet",
+            "owner": 5,
+            "battleBenefit": "placeholder battle benefit",
+            "battleDetriment": "placeholder battle detriment",
+            "factionBoon": {
+                "type": "Command Points",
+                "amount": 1
+            }
+        }
+    ]
+}

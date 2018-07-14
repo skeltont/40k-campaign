@@ -19,6 +19,8 @@ class ZoneInfo extends Component {
     const zone = this.props.zone
     const faction = this.props.faction
 
+    console.log(zone, faction)
+
     if (!zone) return null
 
     return (

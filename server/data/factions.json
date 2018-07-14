@@ -1,0 +1,9 @@
+{
+    "room": null,
+    "0": {
+        "active": true,
+        "name": "New Player",
+        "color": "#0bbcea",
+        "bannerImg": "placeholder.jpg"
+    }
+}
