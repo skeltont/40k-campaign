@@ -27,7 +27,7 @@ router.post('/', function (req, res, next) {
       if (!body) body = { error: 'incorrect key provided' }
     }
 
-    if (!body) body = { error: 'could not find room' }    
+    if (!body) body = { error: 'could not find room' }
     res.status(status).json(body)
   })
 })

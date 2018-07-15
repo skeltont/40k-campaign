@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withCookies } from 'react-cookie'
 
 class Login extends Component {
   constructor (props) {
@@ -27,8 +28,12 @@ class Login extends Component {
     })
     let auth = await authReq.json()
 
-    console.log(auth)
-    // @TODO: bind to cookie
+    if (!auth.error) {
+      const { cookies } = this.props
+
+      cookies.set('campaign40k-room', auth.roomID, { path: '/' })
+      cookies.set('campaign40k-admin', auth.admin, { path: '/' })
+    }
   }
 
   render () {
@@ -54,4 +59,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default withCookies(Login)

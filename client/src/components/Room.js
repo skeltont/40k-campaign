@@ -1,20 +1,43 @@
 import React, { Component } from 'react'
+import { withCookies } from 'react-cookie'
 import Map from './Map'
 import CampaignHistory from './CampaignHistory'
+import { Route, Redirect } from 'react-router-dom'
 
 class Room extends Component {
+  constructor (props) {
+    super(props)
+
+    const { cookies } = props
+    this.state = {
+      room: cookies.get('campaign40k-room'),
+      admin: cookies.get('campaign40k-admin')
+    }
+  }
+
+  loggedIn () {
+    if (typeof this.state.room === 'undefined') return false
+    return true
+  }
+
   render () {
     return (
-      <div id='container'>
-        <div id='map-panel'>
-          <Map />
-        </div>
-        <div id='history-panel'>
-          <CampaignHistory />
-        </div>
-      </div>
+      <Route path='/' render={() => (
+        !this.loggedIn() ? (
+          <Redirect to='/login' />
+        ) : (
+          <div id='container'>
+            <div id='map-panel'>
+              <Map />
+            </div>
+            <div id='history-panel'>
+              <CampaignHistory />
+            </div>
+          </div>
+        )
+      )} />
     )
   }
 }
 
-export default Room
+export default withCookies(Room)
