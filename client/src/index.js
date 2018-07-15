@@ -1,8 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import { CookiesProvider } from 'react-cookie'
+import { BrowserRouter } from 'react-router-dom'
+import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render((
+  <CookiesProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </CookiesProvider>
+), document.getElementById('root'))
 registerServiceWorker()

@@ -1,0 +1,11 @@
+{
+    "id": null,
+    "name": "Room Name",
+    "codes": [
+        {
+            "val": null,
+            "note": null,
+            "admin": false
+        }
+    ]
+}

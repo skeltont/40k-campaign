@@ -10,6 +10,7 @@ client/build
 # misc
 .DS_Store
 .env
+.vscode
 
 client/README.md
 server/README.md

@@ -33,26 +33,32 @@ class Map extends Component {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext('2d')
 
-    let gameStateReq = await window.fetch('http://localhost:3006/zones')
+    let gameStateReq = await window.fetch(`${this.props.host}/gameStates/0`)
+    let zoneReq = await window.fetch(`${this.props.host}/zones/0`)
+    let factionReq = await window.fetch(`${this.props.host}/factions/0`)
+
     let gameState = await gameStateReq.json()
+    let zones = await zoneReq.json()
+    let factions = await factionReq.json()
+
     this.gameState = gameState
+    this.zones = zones
+    this.factions = factions
 
     this.drawMap(ctx)
   }
 
-  drawMap (ctx) {
-    let color = null
-    let faction = null
-    let zone = null
+  checkMapBounds (x, y) {
+    if (x < 0 || x + 1 > this.boardWidth) return false
+    if (y < 0 || y + 1 > this.boardHeight) return false
+    return true
+  }
 
+  drawMap (ctx) {
     for (let i = 0; i < this.boardWidth; ++i) {
       for (let j = 0; j < this.boardHeight; ++j) {
-        zone = (this.gameState) ? this.gameState.zones[(j * 10) + i] : null
-
-        if (zone) {
-          faction = this.gameState.factions[zone.owner]
-          color = faction.color
-        }
+        const owner = (this.gameState) ? this.gameState.zones[(j * 10) + i].owner : null
+        const color = (owner != null) ? this.factions[owner].color : null
 
         this.drawHexagon(
           ctx,
@@ -77,22 +83,13 @@ class Map extends Component {
     ctx.lineTo(x + 3, y + this.hexHeight)
     ctx.closePath()
 
-    ctx.lineWidth=3;
-    if (color) {
-      ctx.strokeStyle = color
-      ctx.fillStyle = color
-    } else {
-      ctx.strokeStyle = '#fff'
-      ctx.fillStyle = '#fff'
-    }
+    ctx.lineWidth = 3
+    ctx.strokeStyle = '#fff'
+    ctx.fillStyle = (color != null && !fill) ? color : '#fff'
+    ctx.globalAlpha = 0.5
 
-    if (fill) {
-      ctx.globalAlpha = 0.5
-      ctx.fill()
-    } else {
-      ctx.globalAlpha = 1
-      ctx.stroke()
-    }
+    ctx.fill()
+    ctx.stroke()
   }
 
   handleClick (e) {
@@ -110,13 +107,27 @@ class Map extends Component {
 
     if (hexX === this.state.hexX && hexY === this.state.hexY) return
 
-    if (hexX < 0 || hexX + 1 > this.boardWidth) return
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    this.drawMap(ctx, this.boardWidth, this.boardHeight)
 
-    if (hexY < 0 || hexY + 1 > this.boardHeight) return
+    if (!this.checkMapBounds(hexX, hexY)) {
+      this.setState({
+        mouseX: null,
+        mouseY: null,
+        hexX: null,
+        hexY: null,
+        zone: null,
+        faction: null
+      })
 
-    const zone = (this.gameState) ? this.gameState.zones[(hexY * 10) + hexX] : null
-    const faction = (this.gameState) ? this.gameState.factions[zone.owner] : null
+      return
+    }
+
+    const zoneId = (this.zones) ? (hexY * 10) + hexX : null
+    const ownerId = (this.gameState) ? this.gameState.zones[zoneId].owner : null
+    const faction = (this.factions) ? this.factions[ownerId] : null
     const color = (faction) ? faction.color : null
+    const zone = (this.zones) ? this.zones.zones[zoneId] : null
 
     const screenX = hexX * this.hexRectangleWidth + ((hexY % 2) * this.hexRadius)
     const screenY = hexY * (this.hexHeight + this.sideLength)
@@ -130,9 +141,6 @@ class Map extends Component {
       faction: faction
     })
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    this.drawMap(ctx, this.boardWidth, this.boardHeight)
-
     this.drawHexagon(ctx, screenX, screenY, color, true)
   }
 
@@ -141,6 +149,7 @@ class Map extends Component {
       <div id='map' onClick={this.handleClick} onMouseMove={this.handleMouseMove}>
         <canvas ref='canvas' width='1200px' height='1000px' />
         <ZoneInfo ref='zoneInfo' faction={this.state.faction} zone={this.state.zone} x={this.state.mouseX} y={this.state.mouseY} />
+
       </div>
     )
   }

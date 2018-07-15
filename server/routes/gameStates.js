@@ -10,7 +10,7 @@ router.get('/:room', function (req, res, next) {
     res.status(404).json({ 'error': 'invalid room id' })
   }
 
-  req.mongo.db('campaign40k').collection('zones').find({ room: room }).toArray(function (err, results) {
+  req.mongo.db('campaign40k').collection('gameStates').find({ room: room }).toArray(function (err, results) {
     if (err) return console.log(err)
     res.status(200).json(results[0])
   })
