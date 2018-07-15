@@ -8,6 +8,8 @@ class Room extends Component {
   constructor (props) {
     super(props)
 
+    this.host = this.props.host
+
     const { cookies } = props
     this.state = {
       room: cookies.get('campaign40k-room'),
@@ -28,7 +30,7 @@ class Room extends Component {
         ) : (
           <div id='container'>
             <div id='map-panel'>
-              <Map />
+              <Map host={this.props.host} />
             </div>
             <div id='history-panel'>
               <CampaignHistory />

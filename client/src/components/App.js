@@ -14,6 +14,8 @@ class App extends Component {
       room: cookies.get('campaign40k-room'),
       admin: cookies.get('campaign40k-admin')
     }
+
+    this.host = 'http://localhost:3006'
   }
 
   loggedIn () {
@@ -23,8 +25,12 @@ class App extends Component {
   render () {
     return (
       <Switch>
-        <Route exact path='/' component={Room} />
-        <Route path='/login' component={Login} />
+        <Route exact path='/' render={(props) => (
+          <Room host={this.host} />
+        )} />
+        <Route path='/login' render={(props) => (
+          <Login host={this.host} />
+        )} />
       </Switch>
     )
   }

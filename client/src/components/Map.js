@@ -33,9 +33,9 @@ class Map extends Component {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext('2d')
 
-    let gameStateReq = await window.fetch('http://localhost:3006/gameStates/0')
-    let zoneReq = await window.fetch('http://localhost:3006/zones/0')
-    let factionReq = await window.fetch('http://localhost:3006/factions/0')
+    let gameStateReq = await window.fetch(`${this.props.host}/gameStates/0`)
+    let zoneReq = await window.fetch(`${this.props.host}/zones/0`)
+    let factionReq = await window.fetch(`${this.props.host}/factions/0`)
 
     let gameState = await gameStateReq.json()
     let zones = await zoneReq.json()
@@ -55,16 +55,10 @@ class Map extends Component {
   }
 
   drawMap (ctx) {
-    let color = null
-    let owner = null
-
     for (let i = 0; i < this.boardWidth; ++i) {
       for (let j = 0; j < this.boardHeight; ++j) {
-        owner = (this.gameState) ? this.gameState.zones[(j * 10) + i].owner : null
-
-        if (owner != null) {
-          color = this.factions[owner].color
-        }
+        const owner = (this.gameState) ? this.gameState.zones[(j * 10) + i].owner : null
+        const color = (owner != null) ? this.factions[owner].color : null
 
         this.drawHexagon(
           ctx,
@@ -133,6 +127,7 @@ class Map extends Component {
     const ownerId = (this.gameState) ? this.gameState.zones[zoneId].owner : null
     const faction = (this.factions) ? this.factions[ownerId] : null
     const color = (faction) ? faction.color : null
+    const zone = (this.zones) ? this.zones.zones[zoneId] : null
 
     const screenX = hexX * this.hexRectangleWidth + ((hexY % 2) * this.hexRadius)
     const screenY = hexY * (this.hexHeight + this.sideLength)
@@ -142,7 +137,7 @@ class Map extends Component {
       mouseY: screenY,
       hexX: hexX,
       hexY: hexY,
-      zone: this.zones.zones[zoneId],
+      zone: zone,
       faction: faction
     })
 
