@@ -25,7 +25,19 @@
             "owner": "int"
         },
         "delta": {
-
+            "type": "string-(battle|diplomacy)",
+            "outcome": "string-(attacker|defender|draw)",
+            "date": "datetime",
+            "zone": "int",
+            "notes": "string",
+            "defender": {
+                "faction": "int",
+                "assist": "[int]"
+            },
+            "attacker": {
+                "faction": "int",
+                "assist": "[int]"
+            }
         }
     },
     "zones": {
@@ -38,6 +50,6 @@
                 "type": "string",
                 "amount": "int"
             }
-        }    
+        }
     }
 }

@@ -1,5 +1,20 @@
 {
     "room": 0,
+    "delta": {
+        "type": "battle",
+        "outcome": "attacker",
+        "date": 1532118575,
+        "zone": 6,
+        "notes": "Big battle",
+        "defender": {
+            "faction": 1,
+            "assist": []
+        },
+        "attacker": {
+            "faction": 0,
+            "assist": []
+        }
+    },
     "zones": {
         "0": {
             "owner": 0
